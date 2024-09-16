@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none; 
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #8a94ae31;
+    color: #fff;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent ;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: brown ;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    color: rgb(0, 255, 89);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: #fff;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: rgb(0, 255, 30);
+    border-bottom: 3px solid rgb(4, 255, 0);
+}
+
+
+
+@media (max-width: 995px) {
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(0, 255, 251) ;
+        border-bottom: 3px solid rgb(0, 255, 110);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem ;
+        background-color: #0a0a0a;
+        border-top: 0.1rem solid rgba(7, 7, 7, 0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(106, 0, 255);
+    }
+    
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(13, 14, 15);
+}
+
+.home .home-content h1,h3{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+span{
+    color: rgb(30, 255, 0);
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+/* Photo Section */
+.home-img{
+    border-radius: 20%;
+}
+
+/* Styling the image in the photo section */
+.home-img img{
+    width: 18vw;
+    border-radius: 20%;
+    box-shadow: 0 0 25px rgb(11, 157, 42);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+/* Hover effect on the photo */
+.home-img img:hover{
+    transform: scale(1.1);
+    font-size: 1.8rem;
+    font-weight: 500;
+    box-shadow:  0 0 25px rgb(0, 255, 17),
+    0 0 50px rgb(64, 255, 0),
+    0 0 75px rgb(0, 255, 72),
+    0 0 100px rgb(34, 255, 0);
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent ;
+    border: 0.2rem solid rgb(72, 0, 255);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: rgb(81, 255, 0);
+}
+
+.social-icons a:hover{
+    color: black;
+    background-color: rgb(0, 255, 64);
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px rgb(16, 179, 21);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color:rgb(0, 255, 4);
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid rgb(0, 255, 17);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.03);
+    background-color: rgb(0, 119, 255);
+    color: #0a3274;
+    box-shadow: 0 0 25px rgb(0, 123, 255);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width:995px){
+    .home{
+        flex-direction: column;
+    }
+    .home-content{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 40vh;
+        margin-top: 4rem;
+    }
+}
+
+
+
+/* Global Website Background */
+body {
+    background-color: rgb(13, 14, 15); /* Same background as the Skills Section */
+    color: #fff; /* White text color to contrast with the dark background */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* You can use your preferred font */
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+/* Skills Section */
+.skills {
+    background-color: rgb(13, 14, 15); /* Matches the background color from the previous code */
+    color: #fff; /* Ensures text color is white to contrast with dark background */
+    padding: 7rem 12%; /* Added padding for spacing */
+    min-height: 100vh; /* Makes sure the section takes at least full screen height */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.skills .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+}
+
+.skills p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Skills Row */
+.skills-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with a minimum size */
+    gap: 2rem; /* Space between each skill box */
+    justify-content: center; /* Center the grid items horizontally */
+}
+
+/* Skill Box (removed circular shape) */
+.skill-circle {
+    position: relative;
+    border-radius: 10px; /* Slightly rounded corners instead of a circle */
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1f1f1f; /* Dark box background */
+    border: 2px solid transparent; /* Transparent border initially */
+}
+
+/* Skill Title and Description */
+.skill-circle p {
+    font-size: 2rem;
+    color: #8983c8; /* Description color */
+}
+
+/* Hover Effects (updated for box instead of circle) */
+.skill-circle:hover {
+    border: 2px solid #fff; /* White border on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    background-color: #2c2c2c; /* Slightly lighter background on hover */
+}
+
+.skill-circle:hover p {
+    color: #fff; /* Change text color to white on hover */
+}
+
+/* Skill Percentage Text */
+.circle-text {
+    fill: #fff; /* Percentage text color */
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .skills {
+        padding: 4rem 7%; /* Adjusted padding for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+/* Contact Section */
+.contact {
+    background-color: rgb(13, 14, 15); /* Consistent with the rest of the site */
+    color: #fff; /* Ensures text color is white */
+    padding: 5rem 9%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.contact h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+}
+
+.contact p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact .form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form elements horizontally */
+}
+
+.contact label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact input,
+.contact textarea {
+    width: 90%; /* Reduced width */
+    max-width: 600px; /* Maximum width */
+    padding: 0.6rem; /* Reduced padding */
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1.2rem; /* Reduced font size */
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width */
+}
+
+.contact textarea {
+    height: 100px; /* Reduced height */
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #0a84ff; /* Highlight color on focus */
+    outline: none;
+}
+
+.contact button {
+    padding: 0.8rem 2rem; /* Reduced size */
+    background-color: #0a84ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem; /* Reduced font size */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 2rem; /* Space above the button */
+    align-self: center; /* Center the button within its container */
+}
+
+.contact button:hover {
+    background-color: #0a72d3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 3rem 5%;
+    }
+}
+
+
+
+
+
+/* Experience Section */
+.experience {
+    background-color: rgb(13, 14, 15);
+    color: #ffffff;
+    padding: 6rem 10%;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.experience h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    margin-top: 7rem;
+    letter-spacing: 2px;
+}
+
+.experience p {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #222;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-inner {
+    background-color: #333;
+    padding: 2.5rem;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Alternating project positions */
+.project:nth-child(odd) {
+    align-self: flex-start; /* Align odd projects to the left */
+}
+
+.project:nth-child(even) {
+    align-self: flex-end; /* Align even projects to the right */
+}
+
+/* Hover effect */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternating hover effect for criss-cross pattern */
+.project:nth-child(odd):hover .project-inner {
+    background-color: #2284bd;
+}
+
+.project:nth-child(even):hover .project-inner {
+    background-color: #2284bd;
+}
+
+.project h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #355bb4;
+    transition: color 0.3s ease;
+}
+
+.project:hover h3 {
+    color: #309b36;
+}
+
+.project p {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+/* Additional CSS for Button and Details */
+.details-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color: #0a84ff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.details-btn:hover {
+    background-color: #0a72d3;
+    transform: scale(1.05);
+}
+
+.project-details {
+    margin-top: 2rem;
+    background-color: #214653;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: max-height 0.3s ease;
+}
+
+.project-details img {
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-details img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 4rem 7%;
+    }
+
+    /* On smaller screens, projects are centered again */
+    .project:nth-child(odd),
+    .project:nth-child(even) {
+        align-self: center;
+    }
+}
+
